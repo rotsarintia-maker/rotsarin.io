@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homepage</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+         :root {
+            --red: #f3d58d;
+            --light: #fdf5f2;
+            --dark: #3a3a3a;
+            --footer: #666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            text-transform: capitalize;
+            transition: .2s linear;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            font-size: 62.5%;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+ 
+        }
+        .gridcontainer {
+            display: grid;
+            grid-template-areas:
+                "header header header header header"
+                "lside main main main main"
+                "footer footer footer footer footer";
+            grid-template-rows: 80px 600px 70px;
+            grid-template-columns: 20% 20% 20% 20% 20%;
+            min-height: 100vh;
+            width: 100vw;
+            background-color: #fcede1f8;
+            overflow: hidden;
+
+        }
+        header {
+            grid-area: header;
+            background-color: #e59d2c;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem 9%;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+            position: relative;
+            z-index: 10;
+        }
+
+        aside.item-L {
+            grid-area: lside;
+            background: linear-gradient(180deg, #25344f, #19212e);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 25px;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        }
+
+        main.item-M {
+            grid-area: main;
+            background-color: #fdf5f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            box-shadow: 0 .5rem 1rem rgb(0, 0, 0, .1)
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #617891;
+            text-align: center;
+            padding: 10px 0;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div class="gridcontainer">
+        <header>
+        
+            <a href="#" class="logo">Daily Hug Market<span></span></a>
+            <nav class="navbar">
+                <a href="#">home</a>
+                <a href="#">about</a>
+                <a href="#">products</a>
+                <a href="#">contact</a>
+            </nav>
+            <form class="search-box" action="#" method="get">
+                <input type="text" placeholder="Search For Products" name="srchh" />
+                <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115
+                   l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1z
+                   M12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                    </svg>
+                </button>
+            </form>
+
+        </header>
+
+        <aside class="item-L">
+            <form action="register.html" method="get">
+                <button type="submit" class="signup-btn">สมัครสมาชิก</button>
+            </form>
+        </aside>
+
+        <main class="item-M">
+            <div class="Pcontainer">
+                <form action="https://httpbin.org/post" method="POST" class="buyall-form">
+                    <div class="products-con">
+
+
+                        <div class="products-item">
+                            <div class="products-image">
+                                <img src="image/detol.webp">
+                            </div>
+                            <div class="products-detail">
+                                เดทตอลไฮยีน 750มล.<br>
+                            </div>
+                            <div class="products-price">
+                                <div class="products-left">฿479</div>
+                                <input type="hidden" name="product_name" value="เดทตอลไฮยีน 750มล.">
+                                <input type="hidden" name="price" value="479">
+                                <input type="number" name="quantity" value="0" min="0" class="qty-input">
+                                <button type="submit" class="products-right">
+                                    <span>ซื้อ</span>
+                                </button>
+                            </div>
+                        </div>
+
+
+                        <div class="products-item">
+                            <div class="products-image">
+                                <img src="image/หมูบดดด.webp">
+                            </div>
+                            <div class="products-detail">
+                                เอสเพียวหมูบด 400กรัม <br>
+                            </div>
+                            <div class="products-price">
+                                <div class="products-left">฿149</div>
+
+                                <input type="hidden" name="product_name" value="เอสเพียวหมูบด 400กรัม">
+                                <input type="hidden" name="price" value="149">
+                                <input type="number" name="quantity" value="0" min="0" class="qty-input">
+                                <button type="submit" class="products-right">
+                                    <span>ซื้อ</span>
+                                </button>
+                            </div>
+                        </div>
+
+
+                        <div class="products-item">
+                            <div class="products-image">
+                                <img src="image/yogurt.webp">
+                           </div>
+                            <div class="products-detail">
+                                โยลิดาโยเกิร์ต 450กรัม
+                            </div>
+                            <div class="products-price">
+                                <div class="products-left">฿59</div>
+
+                                <input type="hidden" name="product_name" value="โยลิดาโยเกิร์ตรสธรรมชาติไขมันต่ำ 450กรัม">
+                                <input type="hidden" name="price" value="59">
+                                <input type="number" name="quantity" value="0" min="0" class="qty-input">
+                                <button type="submit" class="products-right">
+                                    <span>ซื้อ</span>
+                                </button>
+
+                            </div>
+                        </div>
+
+
+                        <div class="products-item">
+                            <div class="products-image">
+                                <img src="image/apples.webp">
+                           </div>
+                            <div class="products-detail">
+                               แอปเปิ้ลแอมโบรเชีย แพค 6
+                            </div>
+                            <div class="products-price">
+                                <div class="products-left">฿109</div>
+
+                                <input type="hidden" name="product_name" value="แอปเปิ้ลแอมโบรเชีย แพค 6">
+                                <input type="hidden" name="price" value="109">
+                                <input type="number" name="quantity" value="0" min="0" class="qty-input">
+                                <button type="submit" class="products-right">
+                                    <span>ซื้อ</span>
+                                </button>
+
+                            </div>
+                        </div>
+
+
+                         <div class="products-item">
+                            <div class="products-image">
+                                <img src="image/snack.webp">
+                            </div>
+                            <div class="products-detail">
+                                เอ็มแอนด์เอ็มช็อกโกแลต30กรัม<br>
+                            </div>
+                            <div class="products-price">
+                                <div class="products-left">฿33</div>
+
+                                <input type="hidden" name="product_name" value="เอ็มแอนด์เอ็มช็อกโกแลต30กรัม">
+                                <input type="hidden" name="price" value="33">
+                                <input type="number" name="quantity" value="0" min="0" class="qty-input">
+                                <button type="submit" class="products-right">
+                                    <span>ซื้อ</span>
+                                </button>
+
+                            </div>
+                        </div>
+
+
+                        <div class="products-item">
+                            <div class="products-image">
+                                <img src="image/ครีมอาบน้ำ.webp">
+                            </div>
+                            <div class="products-detail"><br>
+                                โชกุบุสซึครีมอาบน้ำ400มล.<br>
+                            </div>
+                            <div class="products-price">
+                                <div class="products-left"> ฿59</div>
+                            
+                                <input type="hidden" name="product_name" value="โชกุบุสซึครีมอาบน้ำ400มล.">
+                                <input type="hidden" name="price" value="59">
+                                <input type="number" name="quantity" value="0" min="0" class="qty-input">
+                                <button type="submit" class="products-right">
+                                    <span>ซื้อ</span>
+                                </button>
+
+                            </div>
+                        </div>
+
+
+                        <div class="products-item">
+                            <div class="products-image">
+                                <img src="image/pet food.webp">
+                            </div>
+                            <div class="products-detail"><br>
+                                เพียวริน่าวันสูตรลูกแมว 1.2กก.<br>
+                            </div>
+                            <div class="products-price">
+                                <div class="products-left">฿365</div>
+                                    
+                                <input type="hidden" name="product_name" value="เพียวริน่าวันสูตรลูกแมว 1.2กก.">
+                                <input type="hidden" name="price" value="365">
+                                <input type="number" name="quantity" value="0" min="0" class="qty-input">
+                                <button type="submit" class="products-right">
+                                    <span>ซื้อ</span>
+                                </button>
+
+                            </div>
+                        </div>
+
+
+                        <div class="products-item">
+                            <div class="products-image">
+                                <img src="image/pepsi.webp">
+                            </div>
+                            <div class="products-detail"><br>
+                                เป๊ปซี่ไม่มีน้ำตาล 1.45ล.<br>
+                            </div>
+                            <div class="products-price">
+                                <div class="products-left">฿32 </div>
+
+                                <input type="hidden" name="product_name" value="เป๊ปซี่ไม่มีน้ำตาล 1.45ล.">
+                                <input type="hidden" name="price" value="32">
+                                <input type="number" name="quantity" value="0" min="0" class="qty-input">
+                                <button type="submit" class="products-right">
+                                    <span>ซื้อ</span>
+                                </button>
+
+                            </div>
+                        </div>
+
+
+                        <div class="products-item">
+                            <div class="products-image">
+                                <img src="image/lays bbq.webp">
+                            </div>
+                            <div class="products-detail"><br>
+                                เลย์ร็อครสBBQ 69ก.
+                            </div>
+                            <div class="products-price">
+                                <div class="products-left">฿31</div>
+                                
+                                <input type="hidden" name="product_name" value="เลย์ร็อครสBBQ 69ก.">
+                                <input type="hidden" name="price" value="31">
+                                <input type="number" name="quantity" value="0" min="0" class="qty-input">
+                                <button type="submit" class="products-right">
+                                    <span>ซื้อ</span>
+                                </button>
+
+                            </div>
+                        </div>
+
+
+                        <div class="products-item">
+                            <div class="products-image">
+                                <img src="image/clean.webp">
+                            </div>
+                            <div class="products-detail">
+                                คลีนแอนด์แคร์นอร์มอลซาไลน์<br>200มล.
+                            </div>
+                            <div class="products-price">
+                                <div class="products-left">฿55 </div>
+                                    
+                                <input type="hidden" name="product_name"
+                                    value="คลีนแอนด์แคร์นอร์มอลซาไลน์ 200มล.">
+                                <input type="hidden" name="price" value="55">
+                                <input type="number" name="quantity" value="0" min="0" class="qty-input">
+                                <button type="submit" class="products-right">
+                                    <span>ซื้อ</span>
+                                </button>
+
+                            </div>
+                        </div>
+                        <div class="order-submit">
+                            <button type="submit" class="btn-buyall">สั่งซื้อทั้งหมด</button>
+                        </div>
+                    </div>
+            </div>
+            </form>
+        </main>
+
+                     
+                 <footer>
+            <address style="font-size: 14px;color: #e59d2c;margin-bottom: 5px">
+                ชั้น G เลขที่ 55 ถ.ศรีนครินทร์ แขวงหนองบอน เขตประเวศ กรุงเทพมหานคร 10250
+            </address>
+            <div style="width: 55%;height: 1px;background-color:#fff;opacity: 0.7;margin: 4px 0;"></div>
+            <div class="contact-info">
+                <div class="contact-item"><i class="fab fa-facebook"></i> DailyHugMarg.</div>
+                <div class="contact-item"><i class="fab fa-instagram"></i>DLHmart</div>
+                <div class="contact-item"><i class="fab fa-line"></i>@DLHmart</div>
+                <div class="contact-item"><i class="fas fa-phone"></i>01-000-00000</div>
+            </div>
+        </footer>
+    </div>
+
+
+
+</body>
+</html>

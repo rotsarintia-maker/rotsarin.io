@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --blue: #25344f;
+            --light: #fcede1f8;
+            --footer: #617891;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            text-transform: capitalize;
+            transition: .2s linear;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            font-size: 62.5%;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .gridcontainer {
+            display: grid;
+            grid-template-areas:
+                "header header header header header"
+                "lside main main main main"
+                "footer footer footer footer footer";
+            grid-template-rows: 80px 600px 70px;
+            grid-template-columns: 20% 20% 20% 20% 20%;
+            min-height: 100vh;
+            width: 100vw;
+            background-color: #fcede1f8;
+            overflow: hidden;
+        }
+
+        header {
+            grid-area: header;
+            background-color: #e59d2c;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem 9%;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+            position: relative;
+            z-index: 10;
+        }
+
+        aside.item-L {
+            grid-area: lside;
+            background: linear-gradient(180deg, #25344f, #19212e);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 25px;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        }
+
+        main.item-M {
+            grid-area: main;
+            background-color: #fcede1f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: auto;
+            padding: 40px 0;
+            box-shadow: 0 .5rem 1rem rgb(0, 0, 0, .1)
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #617891;
+            text-align: center;
+            padding: 10px 0;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gridcontainer">
+        <header>
+            <a href="#" class="logo">Daily Hug Market<span></span></a>
+            <nav class="navbar">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Products</a>
+                <a href="#">Contact</a>
+            </nav>
+            <form class="search-box" action="#" method="get">
+                <input type="text" placeholder="Search For Products" name="srchh" />
+                <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115
+                   l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1z
+                   M12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                    </svg>
+                </button>
+            </form>
+        </header>
+
+        <aside class="item-L">
+            <form action="index.html" method="get">
+                <button type="submit" class="Home-btn">หน้าแรก</button>
+            </form>
+        </aside>
+
+        <main class="item-M">
+            <div class="Rcontainer">
+                <input type="radio" name="step" id="step1" checked>
+                <input type="radio" name="step" id="step2">
+
+                <form class="register" action="https://httpbin.org/post" method="get">
+                    <div class="form-step step-1">
+                        <h2 style="font-size: 3rem;margin-bottom: 20px;font-weight: bolder;">สมัครสมาชิก</h2>
+
+
+                        <div class="input-field">
+                            <input type="text" id="name" name="username">
+                            <label>ชื่อ-สกุล</label>
+                        </div>
+
+
+                        <div class="input-field">
+                            <input type="email" id="email" name="email_address">
+                            <label>Email</label>
+                        </div>
+
+
+                        <div class="input-field">
+                            <input type="text" id="tel" name="phone">
+                            <label>เบอร์โทรศัพท์</label>
+                        </div>
+
+
+                        <div class="nav-buttons">
+                            <label for="step2" class="btn">ถัดไป</label>
+                        </div>
+                    </div>
+
+
+                    <div class="form-step step-2">
+                        <h2 style="font-size: 2.5rem;margin-bottom: 20px;font-weight: bolder;">ข้อมูลเพิ่มเติม</h2>
+
+                        <div class="select">
+                            <label>เพศ</label>
+                            <select id="sex" name="sex">
+                                <option value="Female">เพศหญิง</option>
+                                <option value="Male">เพศชาย</option>
+                            </select>
+                        </div>
+
+                        <div class="date">
+                            <label>วันเกิด</label>
+                            <input type="date" id="birth" name="baithday">
+                        </div>
+
+                        <div class="textarea">
+                            <label>ที่อยู่</label>
+                            <textarea id="address" name="ที่อยู่" rows="3" cols="30">ที่อยู่สำหรับจัดส่งพัสดุ</textarea>
+                        </div>
+
+                        <div class="nav-buttons">
+                            <label for="step1" class="btn back">ย้อนกลับ</label>
+                            <button type="submit" class="btn">SUBMIT</button>
+                        </div>
+                    </div>
+        </main>
+
+        <footer>
+            <address style="font-size: 14px;color: #e59d2c;margin-bottom: 5px">
+                ชั้น G เลขที่ 55 ถ.ศรีนครินทร์ แขวงหนองบอน เขตประเวศ กรุงเทพมหานคร 10250
+            </address>
+            <div style="width: 55%;height: 1px;background-color:#fff;opacity: 0.7;margin: 4px 0;"></div>
+                <div class="contact-info">
+                    <div class="contact-item"><i class="fab fa-facebook"></i>DailyHugMarg.</div>
+                    <div class="contact-item"><i class="fab fa-instagram"></i>DLHmart</div>
+                    <div class="contact-item"><i class="fab fa-line"></i>@DLHmart</div>
+                    <div class="contact-item"><i class="fas fa-phone"></i>01-000-00000</div>                
+                       
+                </div>
+        </footer>
+    </div>
+</body>
+
+</html>

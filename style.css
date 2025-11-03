@@ -1,0 +1,321 @@
+header .logo {
+    font-size: 3rem;
+    font-weight: bolder;
+    color: #2e4365;
+}
+
+header .logo span {
+    color: #666(0, 0%, 33%);
+}
+
+header .navbar a {
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #666;
+}
+
+header .navbar a:hover {
+    color: #1a1717;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid #25344f;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.search-box input[type="text"] {
+    border: none;
+    padding: 6px 10px;
+    font-size: 14px;
+    width: 230px;
+    outline: none;
+}
+
+.search-box button {
+    background-color: #25344f;
+    border: none;
+    color: #fff;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.Home-btn {
+    padding: 12px 24px;
+    font-size: 1.5rem;
+    width: 150px;
+    font-weight: bold;
+    color: #2e4365;
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.Home-btn:hover {
+    background-color: #e59d2c;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.signup-btn {
+    padding: 12px 24px;
+    font-size: 1.5rem;
+    width: 150px;
+    font-weight: bold;
+    color: #2e4365;
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.signup-btn:hover {
+    background-color: #e59d2c;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.Pcontainer {
+    width: 100%;
+    
+}
+
+.products-con {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    justify-content: center;
+    align-content: center;
+    align-items: flex-start;
+    transform: scale(0.9);   
+    width: 90%;
+    height: 80%;
+
+    max-width: 1000px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.products-item {
+    flex: 0 0 160px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+    outline: 1px solid #fff;
+}
+
+.products-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.products-detail {
+    padding: 1rem;
+    font-size: 1.3rem;
+    text-align: center;
+    color: var(--brand-dark);
+}
+
+.products-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.products-price {
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.products-left {
+  font-weight: bold;
+  color:#444;
+}
+
+.buy-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.qty-input {
+  width: 45px;
+  padding: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.qty-input:focus {
+  border-color: #e59d2c;
+  outline: none;
+  box-shadow: 0 0 4px rgba(207, 144, 60, 0.3);
+}
+
+.order-submit {
+  display: flex;
+  grid-column: 3 / 5;
+  justify-self: center;
+  align-items: flex-end;
+  padding: 18px ;
+  width: 100%;
+}
+
+.btn-buyall {
+  background-color: #e59d2c;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-buyall:hover {
+  background-color: #2e4365;
+  transform: translateY(4px);
+}
+
+.products-right {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.products-right span {
+    background: #e59d2c;
+    color: #fff;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.products-right span:hover {
+    background-color: #e59d2c;
+}
+
+.Rcontainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        border-radius: 15px;
+    }
+
+.register {
+        background: #f3d58d;
+        padding: 40px 50px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        width: 320px;
+        text-align: center;
+        color: #25344f;
+    }
+
+    .input-field,
+    .select,
+    .date,
+    .textarea {
+        margin-bottom: 20px;
+        text-align: left;
+        font-size: 2rem;
+    }
+
+    .input-field input,
+    select,
+    textarea,
+    .date input {
+        width: 100%;
+        padding: 10px 15px;
+        border-radius: 8px;
+        border: 1px solid #e59d2c;
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+
+    .btn {
+        background-color: #25344f;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 20px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+        display: inline-block;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .btn:hover {
+        background-color: #2e4365;
+    }
+
+    .btn.back {
+        background-color: #999;
+    }
+
+    .btn.back:hover {
+        background-color: #777;
+    }
+
+    .nav-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    input[name="step"] {
+        display: none;
+    }
+
+    .form-step {
+        display: none;
+    }
+
+    #step1:checked~form .step-1 {
+        display: block;
+    }
+
+    #step2:checked~form .step-2 {
+        display: block;
+    }
+
+    .contact-info {
+        display: flex;
+        align-items: center;
+        gap: 27px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contact-item {
+        color: #e59d2c;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .contact-item:hover {
+        color: #e59d2c;
+        transform: scale(1.05);
+    }
